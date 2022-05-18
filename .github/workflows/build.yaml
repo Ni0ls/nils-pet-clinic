@@ -1,7 +1,7 @@
 name: CI/CD-Pipeline> Code Analysis and Tests, Maven Build, Docker Build and Release on Heroku
 on:
   push:
-    branches: [main] #run on push on main branch
+    branches: [main] #run on push on main branch 
   workflow_dispatch: #run manually
 env:
 #### An dieser Stelle müssen eure persönlichen Umgebungsvariablen eingetragen werden
