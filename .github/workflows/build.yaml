@@ -25,7 +25,7 @@ jobs:
     #### AUFGABE 2: SONAR
       # hier kommt die Konfiguration der Sonar-Analyse rein
     - name: Analyse Code with SonarCloud
-      run: ./mvnw -B verify sonar:sonar -Dsonar.projectKey=baralga -Dsonar.organization=baralga -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+      run: ./mvnw -B verify sonar:sonar -Dsonar.projectKey=nils-pet-clinic -Dsonar.organization=ni0ls -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
