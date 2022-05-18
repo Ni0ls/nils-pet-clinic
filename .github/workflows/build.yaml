@@ -8,7 +8,7 @@ env:
   # Tip: Die Token/der API-Key werden als Secrets in den Repository-Settings eingetragen und hier referenziert.
   APP_NAME: "" #<-- hier wird der Name euer Heroku-App eingetragen
   HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }} 
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+  GITHUB_TOKEN: ${{ secrets.NILS_PET_CLINIC_GITHUB_TOKEN }} 
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 jobs:
   compile:
@@ -26,7 +26,7 @@ jobs:
       # hier kommt die Konfiguration der Sonar-Analyse rein
     - name: Analyse Code with SonarCloud
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.NILS_PET_CLINIC_GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}      
       run: ./mvnw -B verify sonar:sonar -Dsonar.projectKey=nils-pet-clinic -Dsonar.organization=ni0ls -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
 
