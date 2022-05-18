@@ -25,17 +25,18 @@ jobs:
     #### AUFGABE 2: SONAR
       # hier kommt die Konfiguration der Sonar-Analyse rein
     - name: Analyse Code with SonarCloud
-      run: ./mvnw -B verify sonar:sonar -Dsonar.projectKey=nils-pet-clinic -Dsonar.organization=ni0ls -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}      
+      run: ./mvnw -B verify sonar:sonar -Dsonar.projectKey=nils-pet-clinic -Dsonar.organization=ni0ls -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+
   
-    - name: Compile, build and push
-      run: |
+    #- name: Compile, build and push
+     # run: |
         #### AUFGABE 3 DOCKER BUILD UND PUSH
           # an dieser Stelle wird die Aufgabe 3 bearbeitet: heroku login, docker build, docker push
         
-    - name: Release
-      run: |
+  #  - name: Release
+     # run: |
         #### AUFGABE 4 DEPLOYMENT AUF HEROKU
           # hier wird die 4. Aufgabe bearbeitet: Release der App auf Heroku
