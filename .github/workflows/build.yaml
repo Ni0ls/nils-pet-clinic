@@ -11,8 +11,8 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 jobs:
-  compile:
-    name: Compile
+  build:
+    name: Build
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
