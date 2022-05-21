@@ -16,7 +16,7 @@
 
   <properties>
 
-    <!-- Sonar anbindung>
+    <!-- Sonar anbindung -->
     <sonar.organization>ni0ls</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
